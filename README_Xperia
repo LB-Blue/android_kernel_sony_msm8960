@@ -1,2 +1,3 @@
 Configuration files can be found in arch/arm/configs.
     Xperia TX/LT29i => blue_hayabusa_defconfig
+	Xperia V/LT25i => blue_tsubasa_defconfig
