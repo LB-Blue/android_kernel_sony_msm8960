@@ -714,6 +714,26 @@ config BU52031NVX_POUCHDETECT
 	help
 	  depends on BU52031NVX
 
+config SONY_ONESEG_TUNER_PM
+	tristate "SONY Oneseg tuner pm driver"
+	default n
+	depends on GENERIC_GPIO
+	help
+	  Select this module to enable SONY Oneseg Tuner PM Driver.
+
+config SONY_FELICA_SUPPORT
+	tristate "Enable FeliCa support"
+	default n
+	help
+	  This option enables support for FeliCa.
+
+config SONY_FELICA_NFC_SUPPORT
+	tristate "Enable FeliCa/NFC combination device support"
+	default n
+	depends on SONY_FELICA_SUPPORT
+	help
+	  This option enables support for FeliCa/NFC combination device.
+
 config RAMDUMP_TAGS
 	bool "Ramdump tags to communicate between kernel and ramdump"
 	default n
