@@ -956,7 +956,7 @@ static void wcnssctrl_rx_handler(struct work_struct *worker)
 		smd_read(penv->smd_ch, NULL, len);
 		return;
 	}
-	if (len < sizeof(struct smd_msg_hdr))
+	if (len <= 0)
 		return;
 
 	rc = smd_read(penv->smd_ch, buf, sizeof(struct smd_msg_hdr));
